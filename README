@@ -1,0 +1,30 @@
+# 🌐 Personal Dashboard – Pemrograman Web ITERA 045
+
+> 🚀 oleh **Muharyan Syaifullah (NIM 045)**.
+
+## 📖 Deskripsi Proyek
+
+Dashboard berbasis HTML, CSS (Tailwind + Custom), dan JS yang menampilkan:
+- 🕒 Waktu real-time
+- ☀️ Cuaca berdasarkan lokasi
+- ✅ To-do list
+- 📅 Kalender mini
+
+## ⚙️ Cara Menjalankan
+
+1. Clone repo ini:
+   ```bash
+   git clone https://github.com/username/personal-dashboard.git
+   ```
+2. Masuk ke folder proyek:
+   ```bash
+   cd personal-dashboard
+   ```
+3. Buka `index.html` di browser favoritmu.
+
+## 👨‍💻 Kontributor
+
+- **Muharyan Syaifullah** (NIM 045)
+- 📧 smuharyan@gmail.com
+
+✨ *“Coding itu seni, bukan cuma logika.”*
