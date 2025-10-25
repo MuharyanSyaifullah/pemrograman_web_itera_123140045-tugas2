@@ -1,0 +1,99 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal Dashboard - praktikum JavaScript Next Gen</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com" defer></script>
+</head>
+<body class="bg-slate-50 min-h-screen p-6 font-sans">
+  <div class="max-w-4xl mx-auto">
+    <header class="flex items-center justify-between mb-6">
+      <h1 class="text-2xl font-bold">Personal Dashboard</h1>
+      <div class="text-sm text-slate-600">NIM: <strong>045</strong></div>
+    </header>
+
+    <main class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- form -->
+      <section class="md:col-span-1 bg-white p-4 rounded-lg shadow-sm">
+        <h2 class="font-semibold mb-2">Tambah Item</h2>
+        <form id="itemForm" class="space-y-3">
+          <div>
+            <label class="block text-sm">Judul</label>
+            <input id="title" required class="w-full border rounded p-2" />
+          </div>
+          <div>
+            <label class="block text-sm">Tipe</label>
+            <select id="type" class="w-full border rounded p-2">
+              <option value="task">Tugas</option>
+              <option value="note">Catatan</option>
+              <option value="event">Jadwal</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm">Keterangan</label>
+            <textarea id="desc" class="w-full border rounded p-2" rows="3"></textarea>
+          </div>
+          <div class="flex gap-2">
+            <button class="px-3 py-2 bg-blue-600 text-white rounded" type="submit">Simpan</button>
+            <button id="clearAll" class="px-3 py-2 bg-red-100 text-red-700 rounded" type="button">Hapus Semua</button>
+          </div>
+        </form>
+
+        <hr class="my-3" />
+        <h3 class="font-medium">Filter</h3>
+        <div class="flex gap-2 mt-2">
+          <button data-filter="all" class="filter-btn px-2 py-1 rounded bg-slate-100">Semua</button>
+          <button data-filter="task" class="filter-btn px-2 py-1 rounded bg-slate-100">Tugas</button>
+          <button data-filter="note" class="filter-btn px-2 py-1 rounded bg-slate-100">Catatan</button>
+          <button data-filter="event" class="filter-btn px-2 py-1 rounded bg-slate-100">Jadwal</button>
+        </div>
+      </section>
+
+      <!-- list -->
+      <section class="md:col-span-2 bg-white p-4 rounded-lg shadow-sm">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="font-semibold">Daftar Item</h2>
+          <div class="text-sm text-slate-500">Items: <span id="count">0</span></div>
+        </div>
+        <ul id="itemsList" class="space-y-2">
+          
+        </ul>
+      </section>
+
+      <!-- Widgets -->
+      <section class="md:col-span-1 bg-white p-4 rounded-lg shadow-sm">
+        <h3 class="font-semibold mb-2">Widget</h3>
+        <div class="mb-3">
+          <div class="text-xs text-slate-500">Waktu Lokal</div>
+          <div id="localTime" class="text-lg font-mono mt-1"></div>
+        </div>
+
+        <div>
+          <div class="text-xs text-slate-500">Cuaca (simulasi)</div>
+          <div id="weatherBox" class="mt-2 p-3 rounded border">Memuat cuaca...</div>
+          <button id="refreshWeather" class="mt-2 px-3 py-1 rounded border text-sm">Refresh</button>
+        </div>
+
+        <details class="mt-4 text-sm text-slate-600">
+          <summary class="cursor-pointer">README singkat</summary>
+          <div class="mt-2">
+            <p>Ini adalah implementasi aplikasi Personal Dashboard untuk praktikum "JavaScript Next Gen".</p>
+            <ul class="list-disc ml-5 mt-2">
+              <li>Interaktif: tambah / edit / hapus item</li>
+              <li>Penyimpanan: menggunakan localStorage</li>
+              <li>ES6+ yang digunakan: let/const, arrow functions, template literals, destructuring, rest/spread, classes, async/await, array methods</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+    </main>
+
+    <footer class="mt-6 text-xs text-slate-500">Dokumentasi: lihat komentar di dalam file untuk penjelasan fitur dan kriteria penilaian.</footer>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
